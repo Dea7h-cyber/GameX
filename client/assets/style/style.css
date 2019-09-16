@@ -1,0 +1,114 @@
+:root {
+  --background-color: #222222;
+  --background-sides: #1a1a1a;
+  --border-menu-hover: #272727;
+  --font-color: #ffffff;
+  --border-sides: #2c2c2c;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Calibri;
+  font-size: 14px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header header"
+    "navbar  content" 1fr
+    "footer  footer"
+    / 200px;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--background-sides);
+  border-bottom: 1px solid var(--border-sides);
+  font-size: 30px;
+  padding: 15px;
+}
+
+/**
+ * Navigation bar left
+**/
+
+nav {
+  grid-area: navbar;
+  background-color: var(--background-sides);
+  border-right: 1px solid var(--border-sides);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 6px;
+  background-color: var(--background-color);
+  border: 4px solid var(--background-sides);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+}
+
+nav ul li:hover {
+  background-color: var(--background-sides);
+  border: 4px solid var(--border-menu-hover);
+}
+
+/**
+ * Main content
+**/
+
+aside {
+  grid-area: content;
+}
+
+.main-container {
+  margin: 20px;
+  text-align: center;
+}
+
+.main-content {
+  display: inline-block;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.game-board {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+  border: 10px solid #522c0e;
+  border-radius: 5px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--background-sides);
+  border-top: 1px solid var(--border-sides);
+  font-size: 16px;
+  padding: 15px;
+  text-align: right;
+}
+
+code {
+  padding: 5px 10px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
+
+.margin-right {
+  margin-right: 5px;
+}

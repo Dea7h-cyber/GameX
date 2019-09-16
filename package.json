@@ -1,0 +1,26 @@
+{
+  "name": "gamex",
+  "version": "1.0.0",
+  "description": "GameX NodeJS",
+  "main": "api/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon api/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dea7h-cyber/GameX.git"
+  },
+  "author": "Dea7h",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dea7h-cyber/GameX/issues"
+  },
+  "homepage": "https://github.com/Dea7h-cyber/GameX#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
