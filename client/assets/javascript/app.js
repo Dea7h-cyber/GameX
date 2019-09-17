@@ -1,14 +1,29 @@
-const gameBoard = document.querySelector('.game-board')
-const dataUrlLinks = document.querySelectorAll('[data-url]')
+// Settings
+const proxy = 'http://localhost:3000';
 
-const startGame = () => {
-  fetch('http://localhost:3000/api/game')
+// Elements
+const mainContent = document.querySelector('div.main-content');
+const dataUrlLinks = document.querySelectorAll('[data-view]');
+
+const getData = path => {
+  fetch(`${proxy}/api/${path}`)
     .then(data => data.json())
     .then(data => {
-      console.log(data)
-      gameBoard.innerHTML = JSON.stringify(data)
+      console.log(data);
+      mainContent.innerHTML = JSON.stringify(data);
     })
-}
+    .catch(err => console.log('getData: ', err));
+};
+
+const getView = path => {
+  fetch(`${proxy}/view/${path}`)
+    .then(data => data.text())
+    .then(data => {
+      console.log(data);
+      mainContent.innerHTML = data;
+    })
+    .catch(err => console.log('getView: ', err));
+};
 
 /**
  * EventListeners
@@ -16,7 +31,8 @@ const startGame = () => {
 
 dataUrlLinks.forEach(link => {
   link.addEventListener('click', e => {
-    let pageName = e.target.getAttribute('data-url')
-    console.log(pageName)
-  })
-})
+    let view = e.target.getAttribute('data-view');
+    console.log(view);
+    getView(view);
+  });
+});
