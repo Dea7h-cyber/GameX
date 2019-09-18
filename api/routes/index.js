@@ -9,8 +9,9 @@ router.use((req, res, next) => {
   next();
 });
 
-router.use('/users', require('./users'));
-router.use('/register', require('./register'));
+// router.use('/users', require('./users'));
+// router.use('/register', require('./register'));
 router.use('/game', require('./game'));
+router.use('/objects', require('./objects'));
 
 module.exports = router;

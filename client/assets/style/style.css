@@ -21,9 +21,9 @@ main {
   height: 100vh;
   display: grid;
   grid-template:
-    'header header'
-    'navbar  content' 1fr
-    'footer  footer'
+    "header header"
+    "navbar  content" 1fr
+    "footer  footer"
     / 200px;
 }
 
@@ -87,11 +87,12 @@ aside {
   border-radius: 5px;
 }
 
-.game-board {
+.game-container {
   position: relative;
   width: 900px;
   height: 700px;
-  border: 30px solid #522c0e;
+  border: 5px solid #522c0e;
+  background: url("../images/ground.jpg") repeat center/55px;
   border-radius: 5px;
 }
 
@@ -112,4 +113,12 @@ code {
 
 .margin-right {
   margin-right: 5px;
+}
+
+.object {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  border-radius: 5px;
 }
