@@ -1,13 +1,13 @@
 // Imports
-import { getData, getView } from './fetch.js';
+// import { getData, getView } from './fetch.js';
 import { Game } from './game.js';
 const GameX = new Game();
 
 // Elements
-const loadViewLinks = document.querySelectorAll('[data-view]');
+//const loadViewLinks = document.querySelectorAll('[data-view]');
 
 // Stuff
-let loading = false;
+// let loading = false;
 
 /**
  * EventListeners

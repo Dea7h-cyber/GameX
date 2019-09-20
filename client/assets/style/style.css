@@ -21,9 +21,9 @@ main {
   height: 100vh;
   display: grid;
   grid-template:
-    "header header"
-    "navbar  content" 1fr
-    "footer  footer"
+    'header header'
+    'navbar  content' 1fr
+    'footer  footer'
     / 200px;
 }
 
@@ -92,7 +92,7 @@ aside {
   width: 900px;
   height: 700px;
   border: 5px solid #522c0e;
-  background: url("../images/ground.jpg") repeat center/55px;
+  /* background: url("../images/ground.jpg") repeat center/55px; */
   border-radius: 5px;
 }
 
@@ -121,4 +121,26 @@ code {
   height: 30px;
   background-size: contain;
   border-radius: 5px;
+}
+
+.theme-picker {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.theme-picker:nth-child(2) {
+  display: block;
+  width: 50px;
+  height: 20px;
+  background-color: #981919;
+  margin: 10px;
+}
+
+.theme-picker:nth-child(3) {
+  display: block;
+  width: 50px;
+  height: 20px;
+  background-color: #20b1ff;
+  margin: 10px;
 }

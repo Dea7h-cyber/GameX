@@ -20,7 +20,8 @@ export class Game {
   }
 
   createGameContainer(objects, { cells }) {
-    return `<div class='game-container' style='width: ${cells.amount.x * cells.size.width}px; height: ${cells.amount.y * cells.size.height}px;'>${objects}</div>`;
+    return `<div class='game-container' style='width: ${cells.amount.x *
+      cells.size.width}px; height: ${cells.amount.y * cells.size.height}px;'>${objects}</div>`;
   }
 
   createObjects({ objects }, { cells }) {
@@ -50,7 +51,6 @@ export class Game {
       let posY = object.y * cell.height - cell.height;
       let background;
 
-
       switch (object.type) {
         case 'win':
           background = `url('./assets/images/star.png') no-repeat center center/${cell.width}px ${cell.height}px`;
@@ -65,15 +65,14 @@ export class Game {
           background = `url('./assets/images/hero.gif') repeat center center/${cell.width}px ${cell.height}px`;
           break;
         default:
-          // background = '#522c0e';
-          background = `url('./assets/images/wall.png') repeat center center/${cell.width}px ${cell.height}px`;
+          background = '#522c0e';
+          // background = `url('./assets/images/wall.png') repeat center center/${cell.width}px ${cell.height}px`;
           break;
       }
 
-      result += `<div class='object' style="left: ${posX}px; bottom: ${posY}px; width: ${width}px; height: ${height}px; background: ${background};"></div>`
+      result += `<div class='object' style="left: ${posX}px; bottom: ${posY}px; width: ${width}px; height: ${height}px; background: ${background};"></div>`;
     }
 
     return result;
   }
-
 }
